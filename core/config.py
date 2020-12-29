@@ -5,7 +5,7 @@ ALLOW_ORIGINS = ['*']
 
 # 数据库连接, 多个数据库可用元组
 # '数据库类型+数据库驱动名称://用户名:数据库密码@数据库连接地址:端口号/数据库名'
-DB_CONN_URI = "mysql+pymysql://root:12345678@localhost:3306/love_vote"
+DB_CONN_URI = "mysql+pymysql://root:12345678@localhost:3306/vote"
 
 # Redis链接配置
 REDIS_HOST = '127.0.0.1'
