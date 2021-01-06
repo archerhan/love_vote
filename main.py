@@ -7,7 +7,7 @@ from starlette.middleware.cors import CORSMiddleware
 from core import router
 from core.config import ALLOW_ORIGINS
 
-from public import logger
+from public.logger import logger
 
 from db.session import SessionLocal
 
@@ -50,4 +50,4 @@ async def session_middleware(request: Request, call_text):
     return response
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8080)
+    uvicorn.run(app, host='127.0.0.1', port=8090)

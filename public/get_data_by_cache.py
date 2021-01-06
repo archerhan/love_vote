@@ -1,5 +1,5 @@
 from fastapi import Request
-from db.db_caches import cache
+from db.db_cache import cache
 from public.str_utils import encrypt_password
 
 

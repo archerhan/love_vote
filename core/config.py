@@ -13,3 +13,8 @@ REDIS_PORT = '6379'
 REDIS_DB = 10
 REDIS_TIME_OUT = 5 * 60 * 60
 
+# 返回结果代码
+HTTP_200 = 200      # 请求正常
+HTTP_400 = 400      # 登录报错
+HTTP_403 = 403      # token失效，强制退出登录
+HTTP_404 = 404      # 系统报错
