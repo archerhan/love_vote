@@ -18,3 +18,18 @@ HTTP_200 = 200      # 请求正常
 HTTP_400 = 400      # 登录报错
 HTTP_403 = 403      # token失效，强制退出登录
 HTTP_404 = 404      # 系统报错
+
+# 是否记录操作日志
+OPEN_OPERATION_LOG = True
+# 是否记录查询操作日志
+OPEN_QUERY_OPERATION_LOG = False
+# 操作日志查询
+LOG_QUERY = "query"
+# 操作日志保存
+LOG_SAVE = "save"
+# 操作日志删除
+LOG_DELETE = "delete"
+
+NAME = '爱投票管理系统'
+LOGO = '/media/logo/logo.jpg'
+HEADER_IMG = '/media/logo/header.jpg'

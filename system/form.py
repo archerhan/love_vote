@@ -1,9 +1,10 @@
 from pydantic import BaseModel
+from fastapi import Form
 
 
 class LoginForm(BaseModel):
-    login_name: str
-    password: str
+    login_name: str = Form(...)
+    password: str = Form(...)
 
 
 class DeptForm(BaseModel):
