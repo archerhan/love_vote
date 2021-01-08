@@ -12,19 +12,20 @@ class SysDepartment(BaseModel):
 
 
 class SysUser(BaseModel):
+    # 表名
     _table_name_ = 'sys_user'
-    __tab_args__ = ({'comment': '后台用户表'})
+    __table_args__ = ({'comment': '后台用户表'})
 
     login_name = Column(String(length=30), nullable=False, comment='登录名')
     password = Column(String(length=50), nullable=False, comment='密码')
     user_name = Column(String(length=50), nullable=False, comment='用户名')
-    gender = Column(SmallInteger, nullable=False, default=0, comment='性别， 0为未知，1为男，2为女')
-    phone = Column(String(length=30), nullable=False, comment='手机号码')
+    gender = Column(SmallInteger, nullable=False, default=0, comment='性别，0为未知，1为男，2为女')
+    phone = Column(String(length=15), nullable=False, comment='手机号码')
     wechat_no = Column(String(length=30), nullable=True, comment='微信号')
-    email = Column(String(length=30), nullable=True, comment='邮箱'),
+    email = Column(String(length=30), nullable=True, comment='邮箱')
     birthday = Column(Date, nullable=True, comment='生日')
-    department_id = Column(String(length=20), index=True, comment='部门ID')
-    role_id = Column(String(length=20), index=True, comment='角色ID')
+    department_id = Column(String(length=20), index=True, comment='部门id')
+    role_id = Column(String(length=20), index=True, comment='角色id')
     remarks = Column(String(length=200), nullable=True, comment='备注说明')
 
 

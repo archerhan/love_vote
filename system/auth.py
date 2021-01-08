@@ -12,6 +12,7 @@ from public.data_utils import get_tree_data, orm_one_to_dict, sql_all_to_dict, o
 from fastapi.responses import JSONResponse
 from public.get_data_by_cache import get_current_user, get_token_key
 
+
 router = APIRouter()
 
 
@@ -71,7 +72,7 @@ async def get_user_info(request: Request):
     return JSONResponse({'code': config.HTTP_200, 'user': user})
 
 
-@router.get('/get-user-menu', dependencies=[Depends(backstage)], tags=[config.LOG_QUERY], name='获取用户菜单权限')
+@router.get('/get-user-menu', dependencies=[Depends(backstage)], tags=[config.LOG_QUERY],name='获取用户菜单权限')
 async def get_user_menu(request: Request):
     """
     获取用户菜单权限
@@ -96,7 +97,7 @@ async def get_user_menu(request: Request):
         child_menu_list = []
         if menu_list:
             for menu in menu_list:
-                # 第一层
+                #第一层
                 if not menu['parent_id']:
                     paren_menu_list.append(menu)
                 else:
